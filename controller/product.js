@@ -13,14 +13,20 @@ router.get("/", (req, res) => {
 });
 
 router.get("/detail", (req, res) => {
+  console.log("Fdfdf");
   productService.getProductById(1, (result) => {
     res.send(result);
   });
 });
 
 router.put("/update", (req, res) => {
-  console.log(req);
   productService.updateProductId(1, (result) => {
+    res.send(result);
+  });
+});
+
+router.get("/search", (req, res) => {
+  productService.searchProductByName(req.query.input, (result) => {
     res.send(result);
   });
 });
