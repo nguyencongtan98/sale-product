@@ -22,9 +22,9 @@ app.use("/cart", cart);
 app.use("/login", login);
 app.use("/checkout", order);
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 
 io.on("connection", (socket) => {
   console.log("User connected");
