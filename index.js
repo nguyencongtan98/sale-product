@@ -37,6 +37,6 @@ const PORT = process.env.PORT || 5000;
 
 // app.listen(PORT);
 
-server.listen(5000, () => {
+server.listen(PORT, () => {
   console.log("Listening on port 5000");
 });
